@@ -1,7 +1,8 @@
 package com.techmonad.repository
 
 import org.slf4j.LoggerFactory
-import slick.jdbc.DB2Profile
+import slick.jdbc.H2Profile
+
 import slick.lifted.ProvenShape
 
 import scala.concurrent.Future
@@ -13,8 +14,7 @@ object PersonRepository {
   /**
     * import H2 driver specific functions. you can import any supported database driver
     */
-  import slick.jdbc.DB2Profile.api._
-
+   import H2Profile.api._
 
   /**
     * create connection with H2 in-memory database
@@ -31,7 +31,7 @@ object PersonRepository {
     */
   private val personTableQuery = TableQuery[PersonTable]
 
-  private def personTableAutoInc: DB2Profile.ReturningInsertActionComposer[Person, Int] =
+  private def personTableAutoInc: H2Profile.ReturningInsertActionComposer[Person, Int] =
     personTableQuery.returning(personTableQuery.map(_.id))
 
   def create(person: Person): Future[Int] =
