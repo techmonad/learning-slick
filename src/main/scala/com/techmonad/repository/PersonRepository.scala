@@ -2,7 +2,7 @@ package com.techmonad.repository
 
 import org.slf4j.LoggerFactory
 import slick.jdbc.H2Profile
-import slick.jdbc.H2Profile.api._
+
 import slick.lifted.ProvenShape
 
 import scala.concurrent.Future
@@ -14,7 +14,7 @@ object PersonRepository {
   /**
     * import H2 driver specific functions. you can import any supported database driver
     */
-
+   import H2Profile.api._
 
   /**
     * create connection with H2 in-memory database
