@@ -2,7 +2,7 @@ name := "learning-slick"
 
 version := "0.1"
 
-scalaVersion := "2.12.13"
+scalaVersion := "2.13.5"
 
 libraryDependencies ++= Seq(
   "com.h2database" % "h2" % "1.4.200",
