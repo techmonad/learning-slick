@@ -8,7 +8,7 @@ libraryDependencies ++= Seq(
   "com.h2database" % "h2" % "1.4.200",
   "com.typesafe.slick" %% "slick-hikaricp" % "3.3.0",
   "com.typesafe.slick" %% "slick" % "3.3.0",
-  "ch.qos.logback" % "logback-classic" % "1.1.11",
+  "ch.qos.logback" % "logback-classic" % "1.2.3",
   "org.scalatest" %% "scalatest" % "3.0.5" % Test
 
 )
